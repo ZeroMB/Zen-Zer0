@@ -27,7 +27,9 @@
 | `user.more`                          | `true`  | Some basic customization.           |
 
 #### Custom Theme Color: `#101010`
-<br>
+
+---
+
 <a href="https://zen-browser.app">
   <img width="406" alt="zen-badge-light" src="https://github.com/user-attachments/assets/4d85fd88-03b0-4024-bfe2-d41473201d39" height="100px" width="auto" />
 </a>
