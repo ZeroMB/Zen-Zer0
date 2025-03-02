@@ -31,5 +31,5 @@
 ---
 
 <a href="https://zen-browser.app">
-  <img width="406" alt="zen-badge-light" src="https://github.com/user-attachments/assets/4d85fd88-03b0-4024-bfe2-d41473201d39" height="60px" width="auto" />
+  <img alt="zen-browser-website" src="https://github.com/user-attachments/assets/4d85fd88-03b0-4024-bfe2-d41473201d39" height="75px" width="auto" />
 </a>
