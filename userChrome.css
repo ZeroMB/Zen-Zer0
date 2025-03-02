@@ -11,7 +11,7 @@
 @import url("userChrome/user-vertical-tabs.css");
 
 /* Name: Audio Indicator */
-/* Description: Enhanced audio indicator. */
+/* Description: Better audio indicator. */
 @import url("userChrome/Audio-Indicator/user-audio-indicator.css");
 
 /* Name: URL Bar */
@@ -23,7 +23,7 @@
 @import url("userChrome/user-extension-menu.css");
 
 /* Name: Context Menu */
-/* Description: Declutter right click menu, hide options, new design. */
+/* Description: Compact context menu. */
 @import url("userChrome/user-context-menu.css");
 
 /* Name: Sidebar */
