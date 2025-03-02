@@ -1,0 +1,52 @@
+@media (-moz-bool-pref: "user.more") {
+
+    /* Hide mute icon in the tab */
+    /* .tab-icon-overlay {
+        display: none !important;
+    } */
+
+    /* Disable Status Bar */
+    #statuspanel {
+        display: none !important;
+    }
+
+    /* Hide scrollbar */
+    * {
+        scrollbar-width: none !important;
+    }
+
+    /* Hide Highlight Split */
+    #tabbrowser-tabpanels[zen-split-view="true"] .browserSidebarContainer.deck-selected {
+        outline: var(--zen-colors-border) !important;
+    }
+
+    /* Change root border color */
+    :root {
+        --zen-colors-border: #393a3e !important;
+    }
+
+    /* Hide 'New Tab' when url bar open */
+    #tabs-newtab-button[in-urlbar="true"] {
+        background: none !important;
+    }
+
+    #tabs-newtab-button[in-urlbar="true"] .toolbarbutton-text {
+        color: #858587 !important;
+    }
+
+    /* Hide 'Open All in Tabs' in Bookmarks */
+    .openintabs-menuitem,
+    .bookmarks-actions-menuseparator {
+        display: none !important;
+    }
+
+    /* Bleeding Corners Fix */
+    .browserContainer {
+        clip-path: inset(0 round var(--zen-native-inner-radius));
+    }
+
+    /* Tab Only Close On Hover */
+    #tabbrowser-tabs .tabbrowser-tab:not([pinned]):is([visuallyselected]):not(:hover) .tab-close-button {
+        display: none !important;
+    }
+}

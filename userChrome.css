@@ -1,0 +1,39 @@
+/* Name: Test */
+/* Description: Test CSS code. */
+@import url("userChrome/user-test.css");
+
+/* Name: More */
+/* Description: Some basic customization. */
+@import url("userChrome/user-more.css");
+
+/* Name: Vertical Tabs */
+/* Description: Improve the essentials, pin tabs. */
+@import url("userChrome/user-vertical-tabs.css");
+
+/* Name: Audio Indicator */
+/* Description: Enhanced audio indicator. */
+@import url("userChrome/Audio-Indicator/user-audio-indicator.css");
+
+/* Name: URL Bar */
+/* Description: Enhanced regular and floating URL Bar. */
+@import url("userChrome/user-urlbar.css");
+
+/* Name: Extension Menu */
+/* Description: Better extension menu. */
+@import url("userChrome/user-extension-menu.css");
+
+/* Name: Context Menu */
+/* Description: Declutter right click menu, hide options, new design. */
+@import url("userChrome/user-context-menu.css");
+
+/* Name: Sidebar */
+/* Description: Floating sidebar. */
+@import url("userChrome/user-sidebar.css");
+
+/* Name: Modern Find Bar */
+/* Description: Transparent float find bar in the top right corner. */
+@import url("userChrome/user-findbar.css");
+
+/* Name: Tab Groups */
+/* Description: Advanced Tab Groups. */
+@import url("userChrome/user-tab-groups.css");

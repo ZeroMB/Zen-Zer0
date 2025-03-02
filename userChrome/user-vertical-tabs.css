@@ -1,0 +1,41 @@
+@media (-moz-bool-pref: "user.vertical-tabs") {
+
+    /* Colors of essentials */
+    #zen-essentials-container .tab-stack .tab-background,
+    #zen-essentials-container .tab-stack:hover .tab-background,
+    #zen-essentials-container tab[selected="true"] .tab-stack .tab-background {
+        opacity: 70% !important;
+    }
+
+    /* Smaller essentials */
+    #zen-essentials-container {
+        --tab-min-height: 42px !important;
+        gap: 1px !important;
+        /* border-bottom: 1px solid #282828 !important; */
+        margin-bottom: 7px !important;
+        padding-bottom: 8px !important;
+        position: relative !important; /* Needed for separator */
+    }
+
+    /* Add separator (essentials) */
+    #zen-essentials-container::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 2%;
+        width: 96%;
+        height: 1px;
+        background: light-dark(rgba(1, 1, 1, 0.075), rgba(255, 255, 255, 0.1));
+    }
+
+    /* Remove separator (pin) */
+    .vertical-pinned-tabs-container-separator {
+        display: none !important;
+    }
+
+    /* Hide pinned tabs close button */
+    #vertical-pinned-tabs-container .tab-close-button,
+    #vertical-pinned-tabs-container .tab-reset-button {
+        display: none !important;
+    }
+}

@@ -1,0 +1,127 @@
+@media (-moz-bool-pref: "user.urlbar") {
+
+    :root {
+        --toolbar-urlbar-border: #303030;
+        --floating-urlbar-bg: #1d1d1d;
+    }
+
+    /* Remove Background */
+    #urlbar-background {
+        background-color: transparent !important;
+    }
+
+    /* Add Border */
+    #urlbar {
+        border: 1px solid var(--toolbar-urlbar-border) !important;
+        --urlbar-height: 37px !important; /* Smaller height */
+    }
+
+    /* While floating */
+    #browser:has(#urlbar[open]) #urlbar-container {
+        background-color: transparent !important;
+        border: 1px solid var(--toolbar-urlbar-border) !important;
+        border-radius: 8px !important;
+        height: 37px !important; /* Smaller height */
+    }
+
+
+    /* Floating URL bar */
+    #urlbar[open] {
+        border: 0 !important;
+        background-color: var(--floating-urlbar-bg) !important;
+        top: 62vh !important;
+        width: 40vw !important;
+        left: 51vw !important;
+    }
+
+    /* Background effect */
+
+    /* #zen-main-app-wrapper:has(#urlbar[open][zen-floating-urlbar="true"]) #browser {
+        pointer-events: none !important;
+        filter: blur(5px) brightness(70%) !important;
+        transition: all 0.2s ease-in-out !important;
+    }
+    
+    #zen-main-app-wrapper:has(#urlbar[open][zen-floating-urlbar="true"]) #urlbar {
+        pointer-events: auto !important;
+    } */
+
+    @media (-moz-bool-pref: "user.urlbar.blur.browser-container") {
+        #browser:has(#urlbar[open]) .browserContainer {
+            pointer-events: none !important;
+            filter: blur(5px) brightness(70%) !important;
+            transition: all 0.2s ease-in-out !important;
+        }
+    }
+
+    @media not (-moz-bool-pref: "user.urlbar.blur.browser-container") {
+        #zen-main-app-wrapper:has(#urlbar[open][zen-floating-urlbar="true"]) #browser {
+            pointer-events: none !important;
+            filter: blur(5px) brightness(70%) !important;
+            transition: all 0.2s ease-in-out !important;
+        }
+
+        #zen-main-app-wrapper:has(#urlbar[open][zen-floating-urlbar="true"]) #urlbar {
+            pointer-events: auto !important;
+        }
+    }
+
+
+    #browser:has(#urlbar[open]) .browserContainer {
+        /* filter: blur(5px) brightness(70%) !important; */
+        scale: 1.01 !important;
+    }
+
+    .browserContainer {
+        transition: all 0.2s ease-in-out !important;
+    }
+
+    .zen-glance-overlay .browserContainer {
+        transition: none !important; /* Disable in glance */
+    }
+
+
+    /* Hide elements in URL bar */
+    #userContext-icons,
+    #picture-in-picture-button,
+    #star-button-box,
+    #tracking-protection-icon-container {
+        display: none !important;
+    }
+
+    /* Hide 'Star icons' in suggestions */
+    .urlbarView-row[type="bookmark"] .urlbarView-type-icon {
+        display: none !important;
+    }
+
+    /* Hide "Search with Google" suggestion */
+    .urlbarView-row[type="search_engine"] {
+        display: none !important;
+    }
+
+    /* Hide bottom shortcut icons */
+    .search-one-offs {
+        display: none !important;
+    }
+
+    /*
+    .search-one-offs:has(.searchbar-engine-one-off-item[selected]) {
+        display: flex !important;
+    }
+    */
+
+    /* Hide permission icon */
+    #permissions-granted-icon {
+        display: none !important;
+    }
+
+    #identity-permission-box {
+        padding-left: 0 !important;
+        margin-left: -5px !important;
+    }
+    
+    /* Hide Connection secure icon */
+    /* #urlbar:not([open]) #identity-icon-box {
+        display: none !important;
+    } */
+}

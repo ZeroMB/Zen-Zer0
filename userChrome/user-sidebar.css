@@ -1,0 +1,56 @@
+@media (-moz-bool-pref: "user.sidebar") {
+
+    /* Remove dotted active border */
+    :root {
+        --default-focusring: none !important;
+    }
+
+    /* Change panel color */
+    window.sidebar-panel {
+        background-color: var(--zen-themed-toolbar-bg) !important;
+    }
+
+    /* Design search box */
+    search-textbox#search-box {
+        appearance: none !important;
+        background-color: transparent !important;
+        border: 1px solid var(--zen-colors-border) !important;
+        padding: 0.5rem !important;
+        border-radius: 5px !important;
+    }
+
+    /* Remove separator */
+    #sidebar-box[sidebarcommand="viewHistorySidebar"] #sidebar-header,
+    #sidebar-box[sidebarcommand="viewBookmarksSidebar"] #sidebar-header,
+    #sidebar-box[sidebarcommand="readinglist_waldemar_b-sidebar-action"] #sidebar-header {
+        border-bottom: none !important;
+    }
+
+    /* Floating sidebar */
+    #sidebar-box[sidebarcommand="viewHistorySidebar"],
+    [sidebarcommand="viewBookmarksSidebar"],
+    [sidebarcommand="readinglist_waldemar_b-sidebar-action"] {
+        background-color: var(--zen-themed-toolbar-bg) !important;
+        border: 1px solid var(--zen-colors-border) !important;
+        padding: var(--zen-toolbox-padding) !important;
+        position: fixed;
+        z-index: 1;
+        height: 80vh !important;
+        width: 20em !important;
+        top: 10vh !important;
+        right: 0.6vw !important;
+        animation: sidebar 0.2s ease-in-out !important;
+    }
+
+    @keyframes sidebar {
+        0% {
+            opacity: 0;
+            transform: translateX(150px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}
